@@ -2,7 +2,6 @@
 
 A secure and scalable **RESTful API** for a parcel delivery system, built using **Express.js**, **TypeScript**, **MongoDB**, and **Zod**. The system supports **role-based access** for **Senders**, **Receivers**, and **Admins**, offering features such as user authentication, parcel creation and tracking, and administrative control.
 
----
 
 ## 🚀 Features
 
@@ -25,7 +24,7 @@ A secure and scalable **RESTful API** for a parcel delivery system, built using 
 - **Validation**: Zod
 - **Security**: Bcrypt, Role-based middleware
 
----
+
 
 ## 📁 Project Structure
 
@@ -46,15 +45,6 @@ src/
 
 ---
 
-## 🔧 Getting Started
-
-### 📌 Prerequisites
-
-- Node.js (v18 or higher)
-- npm or yarn
-- MongoDB (local or Atlas)
-
----
 
 ### 📥 Installation
 
@@ -73,9 +63,9 @@ DB_URL=your_mongodb_connection_url
 NODE_ENV=development
 
 # JWT configuration
-JWT_ACCESS_SECRET=access_secret
-JWT_ACCESS_EXPIRES=1d
-JWT_REFRESH_SECRET=refresh_secret
+JWT_ACCESS_SECRET=
+JWT_ACCESS_EXPIRES=
+JWT_REFRESH_SECRET=
 JWT_REFRESH_EXPIRES=30d
 
 # Super Admin credentials
