@@ -1,0 +1,630 @@
+{
+	"info": {
+		"_postman_id": "d6ce6357-a467-4062-a032-2cda80a16cc5",
+		"name": "parcel-delivery",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19131499"
+	},
+	"item": [
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "auth  all-users GET",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODkwM2M2OTllODNkMzQzNjMzOWFkOWUiLCJlbWFpbCI6InN1cGVyQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc1NDI4Mzk0NywiZXhwIjoxNzU0MzcwMzQ3fQ.MSo15aU7YXv0y1qUxUwcnn3XMuVs8kcleSumM4Nm4Ns",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/user/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"user",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create user POST",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n\"name\": \" Mr Reciver \" ,\r\n\"email\":\"receiver@gmail.com\",\r\n\"password\":\"sender@12345\",\r\n\"role\":\"receiver\",\r\n\"address\":\"Naogoan\",\r\n\"phone\":\"122222222222\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/v1/user/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update user POST",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODkwM2M2OTllODNkMzQzNjMzOWFkOWUiLCJlbWFpbCI6InN1cGVyQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc1NDMwODc4MywiZXhwIjoxNzU0Mzk1MTgzfQ.v_pSsv69536Pzm7kO0ozpjfffRV9YRy0nEqwNtZTWjY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"role\" : \"sender\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/v1/user/update/68903ce8a5ac68d4d41a6462",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"update",
+								"68903ce8a5ac68d4d41a6462"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "single user",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODkwM2M2OTllODNkMzQzNjMzOWFkOWUiLCJlbWFpbCI6InN1cGVyQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc1NDMwNTQxNSwiZXhwIjoxNzU0MzkxODE1fQ.fLrN2dX-rlypd2p92BTgBRFccWvAv-7Hv32jHlbcV-I",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/api/v1/user/68903c759e83d3436339ada2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"68903c759e83d3436339ada2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getMe",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "toggleBlockUser",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODkwM2M2OTllODNkMzQzNjMzOWFkOWUiLCJlbWFpbCI6InN1cGVyQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc1NDMwNzYwNCwiZXhwIjoxNzU0Mzk0MDA0fQ.jDaX9MQ1Qd8GHRH66_r-M5lfF_Z-aA5IpqEGJaYqXuM",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/api/v1/user/block/68903c759e83d3436339ada2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"block",
+								"68903c759e83d3436339ada2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "// {    \r\n//  \"email\": \"super@gmail.com\",\r\n// \"password\":\"12345678\"\r\n// }\r\n\r\n// {\r\n//     \"email\": \"sender@gmail.com\",\r\n//   \"password\":\"12345678\"\r\n// }\r\n\r\n{\r\n   \"email\": \"receiver@gmail.com\",\r\n  \"password\":\"123456789\"\r\n }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/v1/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "logout",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/v1/auth/logout",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "changed-password",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODkwM2NlOGE1YWM2OGQ0ZDQxYTY0NjIiLCJlbWFpbCI6InJlY2VpdmVyQGdtYWlsLmNvbSIsInJvbGUiOiJyZWNlaXZlciIsImlhdCI6MTc1NDMxMDE4OCwiZXhwIjoxNzU0Mzk2NTg4fQ.EuWgv80ucGtpN_iLSwwwUZ-lUWygeDbY-TTpz9cpcrc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"oldPassword\":\"1244sdsdv!\",\r\n    \"newPassword\":\"1244sdsdU!\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/v1/auth/change-password",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"change-password"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Parcel",
+			"item": [
+				{
+					"name": "all-parcels-admin",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODkwM2M2OTllODNkMzQzNjMzOWFkOWUiLCJlbWFpbCI6InN1cGVyQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc1NDMxOTk0MCwiZXhwIjoxNzU0NDA2MzQwfQ.5d0FW760eB_-dmzyckc9r4gMMN3FV2gE7V21VIThfh4",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/api/v1/parcel",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"parcel"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-my-parcels",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODkwM2M3NTllODNkMzQzNjMzOWFkYTIiLCJlbWFpbCI6InNlbmRlckBnbWFpbC5jb20iLCJyb2xlIjoic2VuZGVyIiwiaWF0IjoxNzU0MzIwNTU4LCJleHAiOjE3NTQ0MDY5NTh9.gQ1DcrnN25j4sbngMktaWs0FiIhu7A2TJ3z-SyaJmwA",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/api/v1/parcel/my-parcels?status=Requested",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"parcel",
+								"my-parcels"
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "Requested"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-single-parcel-by-trackID",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODkwM2NlOGE1YWM2OGQ0ZDQxYTY0NjIiLCJlbWFpbCI6InJlY2VpdmVyQGdtYWlsLmNvbSIsInJvbGUiOiJyZWNlaXZlciIsImlhdCI6MTc1NDMyMDgwOSwiZXhwIjoxNzU0NDA3MjA5fQ.jgzUdMQemLdMal4B69Hf00JRdPnzQ3Mkq_TQyMrmE_A",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/api/v1/parcel/track/TRK-20250804-84D85E",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"parcel",
+								"track",
+								"TRK-20250804-84D85E"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create-parcel-sender",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODkwM2M3NTllODNkMzQzNjMzOWFkYTIiLCJlbWFpbCI6InNlbmRlckBnbWFpbC5jb20iLCJyb2xlIjoic2VuZGVyIiwiaWF0IjoxNzU0MzExOTE5LCJleHAiOjE3NTQzOTgzMTl9.-vYB1aEc3lENCXCPQ9jv8_Fp39fKyrEI3_TYQREvTvs",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"type\": \"Electronics\",\r\n  \"weight\": 2.5,\r\n  \"sender\": \"68903c759e83d3436339ada2\",\r\n  \"receiver\": \"68903ce8a5ac68d4d41a6462\",\r\n  \"pickupAddress\": \"123 Main Street, Dhaka\",\r\n  \"deliveryAddress\": \"456 Elm Avenue, Chittagong\",\r\n  \"fee\": 350,\r\n  \"deliveryDate\": \"2025-08-10T10:00:00.000Z\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/v1/parcel/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"parcel",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update-parcel",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODkwM2M2OTllODNkMzQzNjMzOWFkOWUiLCJlbWFpbCI6InN1cGVyQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc1NDMyMjQwOSwiZXhwIjoxNzU0NDA4ODA5fQ.bhuSKHVGXoSl4_-6ffS91BYIrfjHSnHH3ukoNKmrhE4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"currentStatu\":\"Requested\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/v1/parcel/update/6890c5afa6f64ae58ead8e01",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"parcel",
+								"update",
+								"6890c5afa6f64ae58ead8e01"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "cancel-parcel-sender",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODkwM2M3NTllODNkMzQzNjMzOWFkYTIiLCJlbWFpbCI6InNlbmRlckBnbWFpbC5jb20iLCJyb2xlIjoic2VuZGVyIiwiaWF0IjoxNzU0MzIxNjc4LCJleHAiOjE3NTQ0MDgwNzh9.i_NlPYWJCeo4kvNvr3hXhLT3X5enXBZZjTVF8pFNEYc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/api/v1/parcel/cancel/6890c5afa6f64ae58ead8e01",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"parcel",
+								"cancel",
+								"6890c5afa6f64ae58ead8e01"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "confirm-parcel-receiver",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODkwM2NlOGE1YWM2OGQ0ZDQxYTY0NjIiLCJlbWFpbCI6InJlY2VpdmVyQGdtYWlsLmNvbSIsInJvbGUiOiJyZWNlaXZlciIsImlhdCI6MTc1NDMyMTk2MSwiZXhwIjoxNzU0NDA4MzYxfQ.uZ10cDVsP-hJ55GhGPxfgQi04FVQ-O41Xm4JLEVrpUs",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/api/v1/parcel/confirm/6890c5d0a6f64ae58ead8e05",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"parcel",
+								"confirm",
+								"6890c5d0a6f64ae58ead8e05"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "block-parcel-admin",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODkwM2M2OTllODNkMzQzNjMzOWFkOWUiLCJlbWFpbCI6InN1cGVyQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc1NDMyMjQwOSwiZXhwIjoxNzU0NDA4ODA5fQ.bhuSKHVGXoSl4_-6ffS91BYIrfjHSnHH3ukoNKmrhE4",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/api/v1/parcel/block/6890c5afa6f64ae58ead8e01",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"parcel",
+								"block",
+								"6890c5afa6f64ae58ead8e01"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "unblock-parcel-admin",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODkwM2M2OTllODNkMzQzNjMzOWFkOWUiLCJlbWFpbCI6InN1cGVyQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc1NDMyMjQwOSwiZXhwIjoxNzU0NDA4ODA5fQ.bhuSKHVGXoSl4_-6ffS91BYIrfjHSnHH3ukoNKmrhE4",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/api/v1/parcel/unblock/6890c5afa6f64ae58ead8e01",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"parcel",
+								"unblock",
+								"6890c5afa6f64ae58ead8e01"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete-parcel",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODkwM2M2OTllODNkMzQzNjMzOWFkOWUiLCJlbWFpbCI6InN1cGVyQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc1NDMyMjQwOSwiZXhwIjoxNzU0NDA4ODA5fQ.bhuSKHVGXoSl4_-6ffS91BYIrfjHSnHH3ukoNKmrhE4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"currentStatu\":\"Requested\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/v1/parcel/delete/6890c5afa6f64ae58ead8e01",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"parcel",
+								"delete",
+								"6890c5afa6f64ae58ead8e01"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-incoming-parcels-receiver",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODkwM2NlOGE1YWM2OGQ0ZDQxYTY0NjIiLCJlbWFpbCI6InJlY2VpdmVyQGdtYWlsLmNvbSIsInJvbGUiOiJyZWNlaXZlciIsImlhdCI6MTc1NDMyMDgwOSwiZXhwIjoxNzU0NDA3MjA5fQ.jgzUdMQemLdMal4B69Hf00JRdPnzQ3Mkq_TQyMrmE_A",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/api/v1/parcel/incoming",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"parcel",
+								"incoming"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

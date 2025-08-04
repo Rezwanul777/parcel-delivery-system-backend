@@ -117,3 +117,4 @@ DELETE	/parcels/delete/:id	Admin	Delete a parcel
 
 
 ### PostMan :https://cloudy-desert-192591.postman.co/workspace/My-Workspace~7d753e5c-6d8b-4502-8ddc-9a82086c24b2/collection/19131499-d6ce6357-a467-4062-a032-2cda80a16cc5?action=share&creator=19131499
+
