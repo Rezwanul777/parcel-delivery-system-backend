@@ -63,9 +63,9 @@ DB_URL=your_mongodb_connection_url
 NODE_ENV=development
 
 # JWT configuration
-JWT_ACCESS_SECRET=
-JWT_ACCESS_EXPIRES=
-JWT_REFRESH_SECRET=
+JWT_ACCESS_SECRET=access_secret
+JWT_ACCESS_EXPIRES=1d
+JWT_REFRESH_SECRET=refresh_secret
 JWT_REFRESH_EXPIRES=30d
 
 # Super Admin credentials

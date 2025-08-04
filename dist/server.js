@@ -15,6 +15,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const mongoose_1 = __importDefault(require("mongoose"));
 const app_1 = __importDefault(require("./app"));
 const env_1 = require("./app/config/env");
+const seedSuperAdmin_1 = require("./app/utils/seedSuperAdmin");
 // import { seedSuperAdmin } from "./utils/seedSuperAdmin";
 let server;
 const createServer = () => __awaiter(void 0, void 0, void 0, function* () {
@@ -32,7 +33,7 @@ const createServer = () => __awaiter(void 0, void 0, void 0, function* () {
 });
 (() => __awaiter(void 0, void 0, void 0, function* () {
     yield createServer();
-    // await seedSuperAdmin();// create super admin after server start
+    yield (0, seedSuperAdmin_1.seedSuperAdmin)(); // create super admin after server start
 }))();
 // signal handeling
 process.on('SIGTERM', () => {
