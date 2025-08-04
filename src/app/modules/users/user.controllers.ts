@@ -4,6 +4,7 @@ import { catchAsync } from '../../utils/catchAsync';
 import { sendResponse } from '../../utils/sendResponse';
 import { UserServices } from './user.service';
 import  httpStatus  from 'http-status-codes';
+import { JwtPayload } from 'jsonwebtoken';
 
 
 const createUser = catchAsync(async (req: Request, res: Response) => {
@@ -15,6 +16,17 @@ const createUser = catchAsync(async (req: Request, res: Response) => {
     data: result,
   });
 });
+
+const updateUser = catchAsync(async (req:Request,res:Response,next:NextFunction)=>{
+    const decodedToken = req.user as JwtPayload
+    const user = await UserServices.updateUser(req.body,decodedToken)
+    sendResponse(res,{
+        success:true,
+        statusCode: httpStatus.CREATED,
+        message: "User Updated Successfully",
+        data: user,
+    })
+})
 
 const getAllUsers = catchAsync(async (req: Request, res: Response, next: NextFunction) => {
     const query = req.query;
@@ -39,6 +51,18 @@ const getSingleUser = catchAsync(async (req: Request, res: Response) => {
   });
 });
 
+const getMe = catchAsync(async (req:Request,res:Response,next:NextFunction)=>{
+    const decodedToken = req.user as JwtPayload
+    const user = await UserServices.getMe(decodedToken.userId)
+    sendResponse(res,{
+        success:true,
+        statusCode: httpStatus.OK,
+        message: "User Retricved Successfully",
+        data: user,
+    })
+})
+
+
 
 
 
@@ -60,7 +84,9 @@ const toggleBlockUser = catchAsync(async (req: Request, res: Response) => {
 
 export const UserController = {
   createUser,
+  updateUser,
   getAllUsers,
   getSingleUser,
+  getMe,
   toggleBlockUser,
 };

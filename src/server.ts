@@ -3,6 +3,7 @@ import mongoose from "mongoose"
 import {Server} from 'http'
 import app from "./app";
 import { envVars } from "./app/config/env";
+import { seedSuperAdmin } from "./app/utils/seedSuperAdmin";
 
 
 // import { seedSuperAdmin } from "./utils/seedSuperAdmin";
@@ -27,7 +28,7 @@ const createServer= async()=>{
 
 (async()=>{
     await createServer();
-    // await seedSuperAdmin();// create super admin after server start
+    await seedSuperAdmin();// create super admin after server start
 })()
 
 // signal handeling

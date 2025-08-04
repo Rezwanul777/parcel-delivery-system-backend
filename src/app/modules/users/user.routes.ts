@@ -12,10 +12,11 @@ const router = express.Router();
 router.post('/register', validateRequest(createUserZodSchema), UserController.createUser);
 // router.get('/', UserController.getAllUsers);
 router.get('/', checkAuth(UserRole.ADMIN), UserController.getAllUsers);
-router.get('/:id', UserController.getSingleUser);
-// router.delete('/delete/:id', UserController.);
+router.get('/:id',checkAuth(UserRole.ADMIN), UserController.getSingleUser);
+ router.get('/:id', UserController.getMe);
 
-// routes/user.route.ts or wherever UserRoutes is defined
+router.patch('/update/:id', checkAuth(UserRole.ADMIN), validateRequest(updateUserZodSchema), UserController.updateUser);
+//router.delete('/delete/:id', checkAuth(UserRole.ADMIN), UserController.deleteUser);
 
 router.patch('/block/:id',checkAuth(UserRole.ADMIN), validateRequest(updateUserZodSchema), UserController.toggleBlockUser );
 
